@@ -40,6 +40,7 @@ nav{
   padding:1.1rem 3rem;
   background:rgba(8,12,9,0.8);backdrop-filter:blur(18px);
   border-bottom:1px solid var(--border);
+  
 }
 .nav-brand{display:flex;align-items:center;gap:0.7rem;font-family:var(--serif);font-size:1.05rem;}
 .nav-pip{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pip 2.8s ease-in-out infinite;}
@@ -196,9 +197,7 @@ footer span{font-family:var(--mono);font-size:0.6rem;color:var(--muted);}
   h1{font-size:clamp(3rem,11vw,4.5rem);}footer{padding:1.2rem 1.5rem;}
 }
 
-/* SEGURIDAD: el panel NUNCA abre solo al cargar la página */
-#cms-overlay { display: none !important; }
-#cms-overlay.force-open { display: flex !important; }
+/* Panel CMS — controlado por JS */
 
 .tesis-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-top:1rem;}
 .tesis-gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:0.4rem;border:1px solid var(--border);}
@@ -223,8 +222,7 @@ footer span{font-family:var(--mono);font-size:0.6rem;color:var(--muted);}
 .gal-item{position:relative;aspect-ratio:1;}
 .gal-item img{width:100%;height:100%;object-fit:cover;border-radius:0.3rem;border:1px solid rgba(232,228,217,0.08);}
 .gal-del{position:absolute;top:3px;right:3px;background:rgba(224,112,104,0.9);color:white;border:none;border-radius:50%;width:20px;height:20px;font-size:0.7rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;}
-#cms-overlay{display:none !important;}
-#cms-overlay.open{display:flex !important;}
+
 </style>
 </head>
 <body>
@@ -239,6 +237,7 @@ footer span{font-family:var(--mono);font-size:0.6rem;color:var(--muted);}
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#tesis">Investigación</a></li>
     <li><a href="#contacto">Contacto</a></li>
+    <li><a href="blog.html">Blog</a></li>
   </ul>
   <button onclick="openCMS()" style="font-family:Courier New,monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:2rem;background:rgba(46,139,122,0.15);color:#2E8B7A;border:1px solid rgba(46,139,122,0.3);cursor:pointer;">✏️ Editar sitio</button>
 </nav>
@@ -303,9 +302,9 @@ footer span{font-family:var(--mono);font-size:0.6rem;color:var(--muted);}
       <h2 class="contact-h R">¿Trabajamos<br><em>juntos?</em></h2>
       <p class="contact-p R">Abierto a ser becario, proyectos de análisis de datos en la industria alimentaria y colaboraciones entre asociaciones.</p>
       <div class="R">
-        <a href="/cdn-cgi/l/email-protection#a6d2d3e6c5c9d4d4c3c988c5c9cb" class="crow"><div class="crow-l"><span class="crow-name">Correo electrónico</span><span class="crow-handle"><span class="__cf_email__" data-cfemail="96e2e3d6f5f9e4e4f3f9b8f5f9fb">[email&#160;protected]</span></span></div><span class="crow-arr">→</span></a>
-        <a href="#" class="crow"><div class="crow-l"><span class="crow-name">LinkedIn</span><span class="crow-handle">/in/gibrán-gabriel-guerrero-rodríguez-96646330a</span></div><span class="crow-arr">→</span></a>
-        <a href="#" class="crow"><div class="crow-l"><span class="crow-name">GitHub</span><span class="crow-handle">@Isot0p3</span></div><span class="crow-arr">→</span></a>
+        <a href="mailto:gibran.guerrero@comunidad.unam.mx" class="crow" target="_blank" rel="noopener"><div class="crow-l"><span class="crow-name">Correo electrónico</span><span class="crow-handle">gibran.guerrero@comunidad.unam.mx</span></div><span class="crow-arr">→</span></a>
+        <a href="https://www.linkedin.com/in/gibrán-gabriel-guerrero-rodríguez-96646330a" class="crow" target="_blank" rel="noopener"><div class="crow-l"><span class="crow-name">LinkedIn</span><span class="crow-handle">/in/gibrán-gabriel-guerrero-rodríguez-96646330a</span></div><span class="crow-arr">→</span></a>
+        <a href="https://github.com/Isot0p3" class="crow" target="_blank" rel="noopener"><div class="crow-l"><span class="crow-name">GitHub</span><span class="crow-handle">@Isot0p3</span></div><span class="crow-arr">→</span></a>
       </div>
     </div>
     <div class="R">
